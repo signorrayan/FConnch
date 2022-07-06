@@ -60,15 +60,5 @@ def read_user_cli_args():
 
 def display_check_result(response, url, error=""):
     """ Display the connectivity check result. """
-
-    # if options.verbose:
-    #     res = "\U0001F7E2" if result else f"\U0001F534\nError: {error}"
-    # else:
-    #     res = "\U0001F7E2" if result else f"\U0001F534"
-    # print(f"{url} : {res}")
-
-    if read_user_cli_args().verbose:
-        message = f"{G}Online{W},{response}" if response else f"{R}Offline\nError: {error}{W}"
-    else:
-        message = f"{G}Online{W},{response}" if response else f"{R}Offline{W}"
+    message = f"{G}Online{W},{response}" if response else f"{R}Offline {error}{W}"
     print(f"{url} : {message}")
