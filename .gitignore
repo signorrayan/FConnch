@@ -1,0 +1,17 @@
+/venv/
+sample*
+*.log
+*.out
+.idea/
+__pycache__/
+*.py[cod]
+*$py.class
+pip-log.txt
+pip-delete-this-directory.txt
+.cache
+.pytest_cache/
+.pip_cache
+.run
+.hypothesis/
+.env
+.env.prod
