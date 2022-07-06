@@ -30,8 +30,7 @@ $ python3 -m fconnch -u site1.com site2.org site3.net
 
 
 ### :trident: Contributing
-If you have any suggestions/ideas please consider contributing to this project .\
-If you want to help me, don't be afraid to contribute!\
+If you have any suggestions/ideas/improvements please consider contributing to this project .\
 To contribute you can create an issue or (better) you can **fork & create a pull request**.
 
 Contact email: mo.sarayloo [At] proton [dot] me
