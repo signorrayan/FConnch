@@ -1,21 +1,21 @@
 from argparse import ArgumentParser
 
-
 G = '\033[92m'  # green
 Y = '\033[93m'  # yellow
 B = '\033[94m'  # blue
 R = '\033[91m'  # red
-W = '\033[0m'   # white
+W = '\033[0m'  # white
 
 
 def no_color():
     global G, Y, B, R, W
     G = Y = B = R = W = ''
 
+
 def read_user_cli_args():
     """ Handle the cli arguments and options. """
     parser = ArgumentParser(
-        prog="connch",
+        prog="fconnch",
         description="check websites availability."
     )
     parser.add_argument(
@@ -57,6 +57,7 @@ def read_user_cli_args():
     )
     return parser.parse_args()
 
+
 def display_check_result(response, url, error=""):
     """ Display the connectivity check result. """
 
@@ -71,4 +72,3 @@ def display_check_result(response, url, error=""):
     else:
         message = f"{G}Online{W},{response}" if response else f"{R}Offline{W}"
     print(f"{url} : {message}")
-

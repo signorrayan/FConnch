@@ -24,6 +24,7 @@ def site_is_online(url, timeout=3):
             connection.close()
     raise error
 
+
 async def site_is_online_async(url, timeout=3):
     """Return True if the target URL is online.
     Raise an exception otherwise.

@@ -1,2 +1,2 @@
-# Enable connch as a Python package
+# Enable fconnch as a Python package
 __version__ = "0.1"

@@ -24,11 +24,13 @@ def main():
     else:
         _synchronous_check(urls)
 
+
 def _get_websites_urls(user_args):
     urls = user_args.urls
     if user_args.input_file:
         urls += _read_urls_from_file(user_args.input_file)
     return urls
+
 
 def _read_urls_from_file(file):
     file_path = Path(file)
@@ -42,6 +44,7 @@ def _read_urls_from_file(file):
         print("Error: input file not found!", file=sys.stderr)
 
     return []
+
 
 async def _asynchronous_check(urls):
     async def _check(url):
@@ -57,6 +60,7 @@ async def _asynchronous_check(urls):
             display_check_result(response, url)
 
     await asyncio.gather(*(_check(url) for url in urls))
+
 
 def _synchronous_check(urls):
     for url in urls:
