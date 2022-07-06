@@ -20,10 +20,18 @@ $ python3 -m fconnch -h
 $ python3 -m fconnch  -a -v -f domain_list.txt
 $ python3 -m fconnch  -a -n -u site1.com site2.org site3.net
 # Slow check:
-$ python3 -m fconnch -n -u site1.com site2.org site3.net
+$ python3 -m fconnch -u site1.com site2.org site3.net
 ```
 
 
 ### :bulb: ToDo
 - [ ] Add CDN signatures to detect blocked requests instead of showing status code 403.
 - [x] Asynchronous check
+
+
+### :trident: Contributing
+If you have any suggestions/ideas please consider contributing to this project .\
+If you want to help me, don't be afraid to contribute!\
+To contribute you can create an issue or (better) you can **fork & create a pull request**.
+
+Contact email: mo.sarayloo [At] proton [dot] me
