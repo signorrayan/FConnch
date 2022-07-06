@@ -2,7 +2,7 @@
 
 <p align="center">
     <b>FConnch</b><br>
-    A Fast Connection Checker
+    A Fast Bulk Connection Checker
     <br>Easily check a large list of domains in seconds
     <br>
 </p>
