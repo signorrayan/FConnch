@@ -38,6 +38,7 @@ $ python3 -m fconnch -u site1.com site2.org site3.net
 
 ## :bulb: ToDo
 - [ ] Add CDN signatures to detect blocked requests instead of showing status code 403.
+- [ ] Implement dockerized script
 - [x] Asynchronous check
 
 
