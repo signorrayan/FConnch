@@ -14,7 +14,7 @@ $ python3 -m venv venv && source venv/bin/activate
 $ python3 -m pip install -r requirements.txt
 ```
 
-## :desktop_computer: Example
+## :desktop_computer: Usage example
 ```bash
 $ python3 -m fconnch -h
 usage: fconnch [-h] [-u URLs [URLs ...]] [-f FILE] [-a] [-v] [-n] [-t TIMEOUT]
