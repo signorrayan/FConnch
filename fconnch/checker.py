@@ -5,7 +5,7 @@ from http.client import HTTPConnection
 from urllib.parse import urlparse
 
 
-def site_is_online(url, timeout=3):
+def site_is_online(url, timeout):
     """ Return True if the target URL in online.
     Raise an exception otherwise. """
     error = Exception("unknown error!")
@@ -15,7 +15,6 @@ def site_is_online(url, timeout=3):
         connection = HTTPConnection(host=host, port=port, timeout=timeout)
         try:
             connection.request("HEAD", "/")
-            # Next two lines will print HTTP status code of the request
             response_code = connection.getresponse().status
             return response_code
         except Exception as e:
@@ -25,7 +24,7 @@ def site_is_online(url, timeout=3):
     raise error
 
 
-async def site_is_online_async(url, timeout=3):
+async def site_is_online_async(url, timeout):
     """Return True if the target URL is online.
     Raise an exception otherwise.
     """

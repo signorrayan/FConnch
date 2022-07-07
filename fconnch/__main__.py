@@ -9,7 +9,7 @@ from pathlib import Path
 
 def main():
     """ Run ConnChecker."""
-    global verbose_mode
+    global verbose_mode, user_args
     user_args = read_user_cli_args()
     verbose_mode = True if user_args.verbose else False
     if user_args.no_color:
@@ -50,7 +50,7 @@ async def _asynchronous_check(urls):
     async def _check(url):
         error = ""
         try:
-            response = await site_is_online_async(url)
+            response = await site_is_online_async(url, timeout=user_args.timeout)
         except Exception as e:
             response = False
             error = f"\nError: {str(e)}"
@@ -66,7 +66,7 @@ def _synchronous_check(urls):
     for url in urls:
         error = ""
         try:
-            response = site_is_online(url)
+            response = site_is_online(url, timeout=user_args.timeout)
         except Exception as e:
             response = False
             error = f"\nError: {str(e)}"

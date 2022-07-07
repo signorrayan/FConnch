@@ -55,6 +55,13 @@ def read_user_cli_args():
         default=False,
         action='store_true'
     )
+    parser.add_argument(
+        '-t',
+        '--timeout',
+        help='Set timeout - default is 3s',
+        default=3,
+        type=int,
+    )
     return parser.parse_args()
 
 
