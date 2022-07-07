@@ -16,7 +16,7 @@ def read_user_cli_args():
     """ Handle the cli arguments and options. """
     parser = ArgumentParser(
         prog="fconnch",
-        description="check websites availability."
+        description="Check websites availability."
     )
     parser.add_argument(
         "-u",

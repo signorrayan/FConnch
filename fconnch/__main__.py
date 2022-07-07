@@ -53,7 +53,7 @@ async def _asynchronous_check(urls):
             response = await site_is_online_async(url, timeout=user_args.timeout)
         except Exception as e:
             response = False
-            error = f"\nError: {str(e)}"
+            error = f"- {str(e)}"
         if verbose_mode:
             display_check_result(response, url, error)
         else:
@@ -69,7 +69,7 @@ def _synchronous_check(urls):
             response = site_is_online(url, timeout=user_args.timeout)
         except Exception as e:
             response = False
-            error = f"\nError: {str(e)}"
+            error = f"- {str(e)}"
         if verbose_mode:
             display_check_result(response, url, error)
         else:
