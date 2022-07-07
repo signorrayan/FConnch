@@ -17,8 +17,9 @@ $ python3 -m pip install -r requirements.txt
 ## :desktop_computer: Example
 ```bash
 $ python3 -m fconnch -h
+usage: fconnch [-h] [-u URLs [URLs ...]] [-f FILE] [-a] [-v] [-n] [-t TIMEOUT]
 options:
-  -h, --help            show this help message
+  -h, --help            show this help message and exit
   -u URLs [URLs ...], --urls URLs [URLs ...]
                         Enter one or more website URLs (seperated by space).
   -f FILE, --input-file FILE
@@ -26,6 +27,8 @@ options:
   -a, --asynchronous    Run the connectivity check asynchronously
   -v, --verbose         Shows if any error exists related to the dns resolve
   -n, --no-color        Output without color
+  -t TIMEOUT, --timeout TIMEOUT
+                        Set timeout - default is 3s
 
 $ python3 -m fconnch  -a -v -f domain_list.txt
 
