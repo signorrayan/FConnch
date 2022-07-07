@@ -2,8 +2,8 @@
 
 <p align="center">
     <b>FConnch</b><br>
-    A Fast Bulk Connection Checker
-    <br>Easily check a large list of domains in seconds
+    A Fast Bulk Subdomain Availability Checker
+    <br>In recon phase, you can quickly check a huge list of domains availability
     <br>
 </p>
 
