@@ -13,12 +13,7 @@ def no_color():
 
 
 def read_user_cli_args():
-    """
-    Handle the cli arguments and options.
-
-    >>> read_user_cli_args().prog
-    'fconnch'
-    """
+    """ Handle the cli arguments and options. """
     parser = ArgumentParser(
         prog="fconnch",
         description="Check websites availability."
