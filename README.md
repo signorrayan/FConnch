@@ -21,7 +21,7 @@ usage: fconnch [-h] [-u URLs [URLs ...]] [-f FILE] [-a] [-v] [-n] [-t TIMEOUT]
 options:
   -h, --help            show this help message and exit
   -u URLs [URLs ...], --urls URLs [URLs ...]
-                        Enter one or more website URLs (seperated by space).
+                        Enter one or more website URLs (separated by space).
   -f FILE, --input-file FILE
                         Read URLs from a file.
   -a, --asynchronous    Run the connectivity check asynchronously
