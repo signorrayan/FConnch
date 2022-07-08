@@ -16,7 +16,7 @@ def read_user_cli_args():
     """
     Handle the cli arguments and options.
 
-    >>> ArgumentParser().prog
+    >>> read_user_cli_args().prog
     'fconnch'
     """
     parser = ArgumentParser(
