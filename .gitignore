@@ -6,7 +6,6 @@ sample*
 __pycache__/
 *.py[cod]
 *$py.class
-*.txt
 .cache
 .pytest_cache/
 .pip_cache
@@ -14,3 +13,4 @@ __pycache__/
 .hypothesis/
 .env
 .env.prod
+.dockerignore
