@@ -15,7 +15,7 @@ def no_color():
 def read_user_cli_args():
     """
     Handle the cli arguments and options.
-    
+
     >>> ArgumentParser().prog
     'fconnch'
     """
