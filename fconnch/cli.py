@@ -25,7 +25,7 @@ def read_user_cli_args():
         nargs="+",
         type=str,
         default=[],
-        help="Enter one or more website URLs (seperated by space)."
+        help="Enter one or more website URLs (separated by space)."
     )
     parser.add_argument(
         "-f",
