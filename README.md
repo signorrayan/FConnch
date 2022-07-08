@@ -3,11 +3,12 @@
 <p align="center">
     <b>FConnch</b><br>
     A Fast Bulk Subdomain Availability Checker
-    <br>In recon phase, you can quickly check a huge list of domains availability
+    <br>In the recon phase, you can quickly check a huge list of domains availability
     <br>
 </p>
 
 ## :blue_book: Starting stage
+
 ```bash
 $ git clone https://github.com/signorrayan/FConnch.git && cd FConnch
 $ python3 -m venv venv && source venv/bin/activate
@@ -15,6 +16,7 @@ $ python3 -m pip install -r requirements.txt
 ```
 
 ## :desktop_computer: Usage example
+
 ```bash
 $ python3 -m fconnch -h
 usage: fconnch [-h] [-u URLs [URLs ...]] [-f FILE] [-a] [-v] [-n] [-t TIMEOUT]
@@ -38,14 +40,14 @@ $ python3 -m fconnch  -a -n -u site1.com site2.org site3.net
 $ python3 -m fconnch -u site1.com site2.org site3.net
 ```
 
-
 ## :bulb: ToDo
-- [ ] Add CDN signatures to detect blocked requests instead of showing status code 403.
-- [ ] Implement dockerized script
-- [x] Asynchronous check
 
+- [ ] Add CDN signatures to detect blocked requests instead of showing status code 403.
+- [x] Asynchronous check
+- [ ] ~~Implement dockerized script~~
 
 ## :trident: Contributing
+
 If you have any suggestions/ideas/improvements please consider contributing to this project .\
 To contribute you can create an issue or (better) you can **fork & create a pull request**.
 
