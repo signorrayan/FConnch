@@ -14,3 +14,4 @@ __pycache__/
 .env
 .env.prod
 .dockerignore
+Dockerfile
