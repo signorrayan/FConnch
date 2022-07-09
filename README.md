@@ -10,6 +10,11 @@
 ## :blue_book: Starting stage
 
 ```bash
+$ python3 -m pip install --upgrade pipx
+$ pipx install git+https://github.com/signorrayan/FConnch.git
+```
+__-- or --__
+```bash
 $ git clone https://github.com/signorrayan/FConnch.git && cd FConnch
 $ python3 -m venv venv && source venv/bin/activate
 $ python3 -m pip install -r requirements.txt
@@ -18,7 +23,7 @@ $ python3 -m pip install -r requirements.txt
 ## :desktop_computer: Usage example
 
 ```bash
-$ python3 -m fconnch -h
+$ fconnch -h
 usage: fconnch [-h] [-u URLs [URLs ...]] [-f FILE] [-a] [-v] [-n] [-t TIMEOUT]
 options:
   -h, --help            show this help message and exit
@@ -32,12 +37,12 @@ options:
   -t TIMEOUT, --timeout TIMEOUT
                         Set timeout - default is 3s
 
-$ python3 -m fconnch  -a -v -f domain_list.txt
+$ fconnch  -a -v -f domain_list.txt
 
-$ python3 -m fconnch  -a -n -u site1.com site2.org site3.net
+$ fconnch  -a -n -u site1.com site2.org site3.net
 
 # Slow check:
-$ python3 -m fconnch -u site1.com site2.org site3.net
+$ fconnch -u site1.com site2.org site3.net
 ```
 
 ## :bulb: ToDo
