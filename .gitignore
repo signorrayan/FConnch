@@ -2,6 +2,7 @@
 sample*
 *.log
 *.out
+.mypy_cache
 .idea/
 __pycache__/
 *.py[cod]
