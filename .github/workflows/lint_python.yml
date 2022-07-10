@@ -1,5 +1,5 @@
 name: lint_python
-on: [pull_request, push]
+on: [ pull_request, push ]
 jobs:
   lint_python:
     runs-on: ubuntu-latest
@@ -10,11 +10,11 @@ jobs:
           python-version: 3.x
       - run: pip install --upgrade pip wheel
       - run: pip install bandit black codespell flake8 flake8-2020 flake8-bugbear
-                         flake8-comprehensions isort mypy pytest pyupgrade safety
+          flake8-comprehensions isort mypy pytest pyupgrade safety
       - run: bandit --recursive --skip B101 .  # B101 is assert statements
       - run: black --check . || true
       - run: codespell --ignore-words-list=seperated  # --skip="*.css,*.js,*.lock"
-      - run: flake8 . --count --max-complexity=10 --max-line-length=88 --show-source --statistics
+      - run: flake8 . --count --max-complexity=10 --max-line-length=88 --ignore W605,W291 --show-source --statistics
       - run: isort --check-only --profile black . || true
       - run: pip install -r requirements.txt || pip install --editable . || pip install .
       - run: mkdir --parents --verbose .mypy_cache
