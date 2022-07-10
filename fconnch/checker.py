@@ -4,7 +4,7 @@ from urllib.parse import urlparse
 
 import aiohttp
 
-statuses = {}
+statuses = {}  # type: ignore
 
 
 def update_statuses(response_code):
