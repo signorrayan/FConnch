@@ -92,7 +92,7 @@ def show_final_result():
     [print(f"{BLD}{str(h):15}{W}", end='') for h in headers]
     print('\n' + '-' * (15 * len(statuses) + 15))
     [print(f"{str(key):15}", end='') for key in [total_urls, *list(statuses.values())]]
-    print()
+    print("\n")
     # print(f"\n{B}Total Domains:{W} {total_urls}\n{B}Statuses:{W} {statuses}")
 
 
