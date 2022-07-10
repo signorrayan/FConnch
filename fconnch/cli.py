@@ -10,14 +10,14 @@ BLD = '\033[1m'
 
 def banner():
     print("""%s%s
- _____ ____                       _     
-|  ___/ ___|___  _ __  _ __   ___| |__  
+ _____ ____                       _
+|  ___/ ___|___  _ __  _ __   ___| |__
 | |_ | |   / _ \| '_ \| '_ \ / __| '_ \ 
 |  _|| |__| (_) | | | | | | | (__| | | |
 |_|   \____\___/|_| |_|_| |_|\___|_| |_|
 
-%s%s# Coded By Mohammadreza Sarayloo - @signorrayan %s\n
-    """ % (BLD, G, W, B, W))
+%s%s# Coded By Mohammadreza Sarayloo - @signorrayan %s
+""" % (BLD, G, W, B, W))
 
 
 def no_color():
@@ -82,3 +82,6 @@ def display_check_result(response, url, error=""):
     """ Display the connectivity check result. """
     message = f"{G}Online{W},{response}" if response else f"{R}Offline {error}{W}"
     print(f"{url} : {message}")
+
+
+banner()
