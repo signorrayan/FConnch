@@ -9,15 +9,15 @@ BLD = '\033[1m'
 
 
 def banner():
-    print("""%s%s
+    print(r"""{}{}
  _____ ____                       _
 |  ___/ ___|___  _ __  _ __   ___| |__
 | |_ | |   / _ \| '_ \| '_ \ / __| '_ \ 
 |  _|| |__| (_) | | | | | | | (__| | | |
 |_|   \____\___/|_| |_|_| |_|\___|_| |_|
 
-%s%s# Coded By Mohammadreza Sarayloo - @signorrayan %s
-""" % (BLD, G, W, B, W))
+{}{}# Coded By Mohammadreza Sarayloo - @signorrayan {}
+""".format(BLD, G, W, B, W))
 
 
 def no_color():
