@@ -4,12 +4,14 @@ import sys
 from pathlib import Path
 
 from fconnch.checker import site_is_online, site_is_online_async, statuses
-from fconnch.cli import display_check_result, read_user_cli_args, no_color, BLD, W
+from fconnch.cli import (BLD, W, display_check_result, no_color,
+                         read_user_cli_args, banner)
 
 
 def main():
     """ Run ConnChecker."""
     global verbose_mode, user_args
+    banner()
     user_args = read_user_cli_args()
     verbose_mode = True if user_args.verbose else False
     if user_args.no_color:
