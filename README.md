@@ -1,9 +1,9 @@
-<h3 align="center"><img src="media/logo.png" alt="logo" height="250px"></h3>
+<h3 align="center"><img src="media/logo.png" alt="logo" height="200px"></h3>
 
+<h3 align="center">FConnch</h3>
 <p align="center">
-    <b>FConnch</b><br>
     A Fast Bulk Subdomain Availability Checker
-    <br>In the recon phase, you can quickly check a huge list of domains availability
+    <br>In the recon phase, you can quickly check a huge list of domains availability in seconds
     <br>
 </p>
 
@@ -13,7 +13,9 @@
 $ python3 -m pip install --upgrade pipx
 $ pipx install git+https://github.com/signorrayan/FConnch.git
 ```
+
 __-- or --__
+
 ```bash
 $ git clone https://github.com/signorrayan/FConnch.git && cd FConnch
 $ python3 -m venv venv && source venv/bin/activate
