@@ -82,6 +82,3 @@ def display_check_result(response, url, error=""):
     """ Display the connectivity check result. """
     message = f"{G}Online{W},{response}" if response else f"{R}Offline {error}{W}"
     print(f"{url} : {message}")
-
-
-banner()
