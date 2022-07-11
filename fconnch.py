@@ -3,9 +3,9 @@ import asyncio
 import sys
 from pathlib import Path
 
-from checker import site_is_online, site_is_online_async, statuses
-from cli import (BLD, W, banner, display_check_result, no_color,
-                 read_user_cli_args)
+from fconnch.checker import site_is_online, site_is_online_async, statuses
+from fconnch.cli import (BLD, W, banner, display_check_result, no_color,
+                         read_user_cli_args)
 
 
 def main():
