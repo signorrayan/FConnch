@@ -20,9 +20,9 @@ $ fconnch -h
 __-- or --__
 
 ```bash
-$ git clone https://github.com/signorrayan/FConnch.git && cd FConnch/fconnch
+$ git clone https://github.com/signorrayan/FConnch.git && cd FConnch
 $ python3 -m venv venv && source venv/bin/activate
-$ python3 -m pip install -r ../requirements.txt
+$ python3 -m pip install -r requirements.txt
 $ python3 fconnch.py -h
 ```
 
