@@ -14,7 +14,7 @@ jobs:
       - run: bandit --recursive --skip B101 .  # B101 is assert statements
       - run: black --check . || true
       - run: codespell --ignore-words-list=seperated  # --skip="*.css,*.js,*.lock"
-      - run: flake8 . --count --max-complexity=10 --max-line-length=88 --ignore W605,W291 --show-source --statistics
+      - run: flake8 . --count --max-complexity=10 --max-line-length=88 --ignore W605 --show-source --statistics
       - run: isort --check-only --profile black . || true
       - run: pip install -r requirements.txt || pip install --editable . || pip install .
       - run: mkdir --parents --verbose .mypy_cache
