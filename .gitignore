@@ -5,6 +5,7 @@ sample*
 .mypy_cache
 .idea/
 build/
+fconnch.egg-info
 __pycache__/
 *.py[cod]
 *$py.class
