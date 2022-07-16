@@ -4,6 +4,7 @@ sample*
 *.out
 .mypy_cache
 .idea/
+build/
 __pycache__/
 *.py[cod]
 *$py.class
