@@ -11,6 +11,7 @@ from fconnch.cli import (
     display_check_result,
     no_color,
     read_user_cli_args,
+    table,
 )
 
 
@@ -27,6 +28,7 @@ def main():
         print("Error: No URL to check.", file=sys.stderr)
         sys.exit(1)
 
+    table()
     if user_args.asynchronous:
         asyncio.run(_asynchronous_check(urls))
     else:

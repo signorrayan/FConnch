@@ -4,9 +4,17 @@ import sys
 from pathlib import Path
 
 from fconnch.checker import site_is_online, site_is_online_async, statuses
-from fconnch.cli import (BLD, W, Y, banner, display_check_result, no_color
+from fconnch.cli import (
+    BLD,
+    W,
+    Y,
+    banner,
+    display_check_result,
+    no_color,
+    read_user_cli_args,
+    table,
+)
 
-read_user_cli_args)
 
 def main():
     """ Run ConnChecker."""
@@ -21,6 +29,7 @@ def main():
         print("Error: No URL to check.", file=sys.stderr)
         sys.exit(1)
 
+    table()
     if user_args.asynchronous:
         asyncio.run(_asynchronous_check(urls))
     else:
