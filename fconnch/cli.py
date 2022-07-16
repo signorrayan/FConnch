@@ -18,7 +18,8 @@ def banner():
 
 {}{}# Coded By Mohammadreza Sarayloo - @signorrayan {}
 """.format(BLD, G, W, B, W))
-    print(f"\n\n{BLD}{'|':30}{'Domain':32}{'|':5}{'Availability':15}{'|':5}{'Status':10}|{W}\n|", '-' * 96)
+    print(f"\n\n{BLD}{'|':30}{'Domain':32}{'|':5}{'Availability':15}{'|':5}\
+    {'Status':10}|{W}\n|", '-' * 96)
 
 
 def no_color():
@@ -81,5 +82,6 @@ def read_user_cli_args():
 
 def display_check_result(response, url, error=""):
     """ Display the connectivity check result. """
-    message = f"{BLD}{G}{'Online':12}{W}{'|':6}{BLD}{B}{response}{W}" if response else f"{R}{BLD}{'Offline':12}{W}{'|':6}{R}{error}{W}"
+    message = f"{BLD}{G}{'Online':12}{W}{'|':6}{BLD}{B}{response}{W}" if response \
+        else f"{R}{BLD}{'Offline':12}{W}{'|':6}{R}{error}{W}"
     print(f"| {url:60}{'|':8}{message}")
