@@ -9,7 +9,7 @@
 
 ## :blue_book: Starting stage
 
-<h3 align="center"><img src="media/usage-exp.gif" alt="logo" height="350"></h3>
+<h3 align="center"><img src="media/usage-exp.gif" alt="logo" height="550"></h3>
 
 ```bash
 $ python3 -m pip install --upgrade pipx
