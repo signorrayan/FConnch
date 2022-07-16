@@ -4,9 +4,9 @@ import sys
 from pathlib import Path
 
 from fconnch.checker import site_is_online, site_is_online_async, statuses
-from fconnch.cli import (BLD, W, Y, banner, display_check_result, no_color,
-                         read_user_cli_args)
+from fconnch.cli import (BLD, W, Y, banner, display_check_result, no_color
 
+read_user_cli_args)
 
 def main():
     """ Run ConnChecker."""

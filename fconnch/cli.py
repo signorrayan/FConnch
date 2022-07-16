@@ -18,6 +18,9 @@ def banner():
 
 {}{}# Coded By Mohammadreza Sarayloo - @signorrayan {}
 """.format(BLD, G, W, B, W))
+
+
+def table():
     print(f"\n\n{BLD}{'|':30}{'Domain':32}{'|':5}{'Availability':15}|\
     {'Status':10}|{W}\n|", '-' * 96)
 
