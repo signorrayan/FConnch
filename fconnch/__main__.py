@@ -60,7 +60,7 @@ async def _asynchronous_check(urls):
             response = await site_is_online_async(url, timeout=user_args.timeout)
         except Exception as e:
             response = False
-            error = f"- {str(e)}"
+            error = f"{str(e)}"
         if verbose_mode:
             display_check_result(response, url, error)
         else:
@@ -76,7 +76,7 @@ def _synchronous_check(urls):
             response = site_is_online(url, timeout=user_args.timeout)
         except Exception as e:
             response = False
-            error = f"- {str(e)}"
+            error = f"{str(e)}"
         if verbose_mode:
             display_check_result(response, url, error)
         else:
@@ -94,6 +94,15 @@ def show_final_result():
     [print(f"{str(key):15}", end='') for key in [total_urls, *list(statuses.values())]]
     print("\n")
     # print(f"\n{B}Total Domains:{W} {total_urls}\n{B}Statuses:{W} {statuses}")
+
+
+async def run_sequence(*functions) -> None:
+    for function in functions:
+        await function
+
+
+async def run_parallel(*functions) -> None:
+    await asyncio.gather(*functions)
 
 
 if __name__ == "__main__":

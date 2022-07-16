@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 from fconnch.checker import site_is_online, site_is_online_async, statuses
-from fconnch.cli import (BLD, W, banner, display_check_result, no_color,
+from fconnch.cli import (BLD, W, Y, banner, display_check_result, no_color,
                          read_user_cli_args)
 
 
@@ -60,7 +60,7 @@ async def _asynchronous_check(urls):
             response = await site_is_online_async(url, timeout=user_args.timeout)
         except Exception as e:
             response = False
-            error = f"- {str(e)}"
+            error = f"{str(e)}"
         if verbose_mode:
             display_check_result(response, url, error)
         else:
@@ -76,7 +76,7 @@ def _synchronous_check(urls):
             response = site_is_online(url, timeout=user_args.timeout)
         except Exception as e:
             response = False
-            error = f"- {str(e)}"
+            error = f"{str(e)}"
         if verbose_mode:
             display_check_result(response, url, error)
         else:
@@ -89,11 +89,20 @@ def show_final_result():
         statuses.setdefault("Status(Offline)", offline_urls)
     headers = ["Total URLs", *list(statuses.keys())]
     print()
-    [print(f"{BLD}{str(h):15}{W}", end='') for h in headers]
+    [print(f"{Y}{BLD}{str(h):15}{W}", end='') for h in headers]
     print('\n' + '-' * (15 * len(statuses) + 15))
     [print(f"{str(key):15}", end='') for key in [total_urls, *list(statuses.values())]]
     print("\n")
     # print(f"\n{B}Total Domains:{W} {total_urls}\n{B}Statuses:{W} {statuses}")
+
+
+async def run_sequence(*functions) -> None:
+    for function in functions:
+        await function
+
+
+async def run_parallel(*functions) -> None:
+    await asyncio.gather(*functions)
 
 
 if __name__ == "__main__":
