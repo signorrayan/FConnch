@@ -14,6 +14,8 @@ from fconnch.cli import (
     table,
 )
 
+online_urls = {}
+
 
 def main():
     """ Run ConnChecker."""
@@ -35,6 +37,7 @@ def main():
         _synchronous_check(urls)
 
     show_final_result()
+    write_online_urls_to_file(online_urls, user_args.output_file)
 
 
 def _get_websites_urls(user_args):
@@ -74,6 +77,9 @@ async def _asynchronous_check(urls):
         else:
             display_check_result(response, url)
 
+        if response:
+            online_urls[url] = response
+
     await asyncio.gather(*(_check(url) for url in urls))
 
 
@@ -89,6 +95,17 @@ def _synchronous_check(urls):
             display_check_result(response, url, error)
         else:
             display_check_result(response, url)
+
+        if response:
+            online_urls[url] = response
+
+
+def write_online_urls_to_file(online_urls, output_file):
+    """Write the online URLs to a text file."""
+    with open(output_file, 'w') as file:
+        for url, status in online_urls.items():
+            file.write(f"{url},{status}\n")
+    print(f"Online URLs written to '{output_file}'.")
 
 
 def show_final_result():

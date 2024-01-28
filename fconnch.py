@@ -7,13 +7,14 @@ from fconnch.checker import site_is_online, site_is_online_async, statuses
 from fconnch.cli import (
     BLD,
     W,
-    Y,
     banner,
     display_check_result,
     no_color,
     read_user_cli_args,
     table,
 )
+
+online_urls = {}
 
 
 def main():
@@ -36,6 +37,7 @@ def main():
         _synchronous_check(urls)
 
     show_final_result()
+    write_online_urls_to_file(online_urls, user_args.output_file)
 
 
 def _get_websites_urls(user_args):
@@ -75,6 +77,9 @@ async def _asynchronous_check(urls):
         else:
             display_check_result(response, url)
 
+        if response:
+            online_urls[url] = response
+
     await asyncio.gather(*(_check(url) for url in urls))
 
 
@@ -91,6 +96,17 @@ def _synchronous_check(urls):
         else:
             display_check_result(response, url)
 
+        if response:
+            online_urls[url] = response
+
+
+def write_online_urls_to_file(online_urls, output_file):
+    """Write the online URLs to a text file."""
+    with open(output_file, 'w') as file:
+        for url, status in online_urls.items():
+            file.write(f"{url},{status}\n")
+    print(f"Online URLs written to '{output_file}'.")
+
 
 def show_final_result():
     offline_urls = int(total_urls) - sum(statuses.values())
@@ -98,7 +114,7 @@ def show_final_result():
         statuses.setdefault("Status(Offline)", offline_urls)
     headers = ["Total URLs", *list(statuses.keys())]
     print()
-    [print(f"{Y}{BLD}{str(h):15}{W}", end='') for h in headers]
+    [print(f"{BLD}{str(h):15}{W}", end='') for h in headers]
     print('\n' + '-' * (15 * len(statuses) + 15))
     [print(f"{str(key):15}", end='') for key in [total_urls, *list(statuses.values())]]
     print("\n")

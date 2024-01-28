@@ -35,15 +35,17 @@ options:
   -h, --help            show this help message and exit
   -u URLs [URLs ...], --urls URLs [URLs ...]
                         Enter one or more website URLs (separated by space).
-  -f FILE, --input-file FILE
+  -i FILE, --input-file FILE
                         Read URLs from a file.
+  -o FILE, --output-file FILE 
+                        Save the results to a file
   -a, --asynchronous    Run the connectivity check asynchronously
   -v, --verbose         Shows if any error exists related to the dns resolve
   -n, --no-color        Output without color
   -t TIMEOUT, --timeout TIMEOUT
                         Set timeout - default is 3s
 
-$ fconnch  -a -v -f domain_list.txt
+$ fconnch  -a -v -i domain_list.txt -o results.txt
 
 $ fconnch  -a -n -u site1.com site2.org site3.net
 

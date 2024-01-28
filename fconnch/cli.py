@@ -46,12 +46,20 @@ def read_user_cli_args():
         help="Enter one or more website URLs (separated by space)."
     )
     parser.add_argument(
-        "-f",
+        "-i",
         "--input-file",
         metavar="FILE",
         type=str,
         default="",
         help="Read URLs from a file."
+    )
+    parser.add_argument(
+        "-o",
+        "--output-file",
+        metavar="FILE",
+        type=str,
+        default="online-urls.txt",
+        help="Write online URLs + status code to a file."
     )
     parser.add_argument(
         "-a",
